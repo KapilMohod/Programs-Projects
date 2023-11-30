@@ -1,0 +1,56 @@
+package JAVA;
+import java.util.*;
+
+class OOP {
+    
+    public static void main(String[] args) {
+
+        int No1 = 0, No2 = 0, Ans = 0;
+        
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter First Number : ");
+        No1 = sobj.nextInt();
+
+        System.out.println("Enter Second Number : ");
+        No2 = sobj.nextInt();
+
+        Arithmatic aobj = new Arithmatic(No1, No2);
+        Ans = aobj.Addition();
+        System.out.println("Addition is : "+Ans);
+
+        Ans = aobj.Substraction();
+        System.out.println("Substraction is : "+Ans);
+
+        sobj.close();
+    }
+}
+
+class Arithmatic 
+{
+    public int value1;
+    public int value2;
+
+    public Arithmatic(int A, int B)
+    {
+        this.value1 = A;
+        this.value2 = B;
+    }
+
+    public int Addition()
+    {
+        int Result = 0;
+        Result =  this.value1 + this.value2;
+        return Result;
+    }
+
+    public int Substraction()
+    {
+        int Result = 0;
+        Result =  this.value1 - this.value2;
+        return Result;
+
+    }
+
+}
+
